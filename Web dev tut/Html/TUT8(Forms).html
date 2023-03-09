@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,      initial-scale=1.0" />
+        <title>Forms and input tag</title>
+    </head>
+    
+    <body>
+        <h2>HTML Forms</h2>
+    
+        <!--// action is the back end part in which the input data will be stored -->
+        <form action="backend.php">
+            <!--// br is a character whose sole purpose is to make a line break. Div is simply a type of milieu-friendly plastic that wraps things and tells the browser “Everything inside has been grouped together in a box." https://www.w3schools.com/tags/tag_div.ASP -->
+            
+            <!-- / <label for="id comes here"></label> -->
+            <!--// by this on clicking the Name is will select he text    area -->
+            <label for="myName">Name</label>
+            
+            <div>
+                <!--/ <input type="type of detail " name="this save the  data in the backend by this name" id="used for labels"> -->
+            
+                <input type="text" name="myName" id="myName" />
+            </div>
+            <br>
+            <div>
+                Role: <input type="text" name="myRole" />
+            </div>
+            <br>
+            <div>
+                Email: <input type="email" name="myEmail" />
+            </div>
+            <br>
+            <div>
+                Date: <input type="date" name="myDate" />
+            </div>
+            <br>
+            <div>
+                Bonus:<input type="number" name="myBonus" />
+            </div>
+            <br>
+            <div>
+                Are you eligible? <input type="checkbox"    name="myEligibility" />
+            
+                <!--// by using checked we can keep the checkbox tick     before -->
+                Are you eligible? <input type="checkbox"    name="myEligibility" checked />
+            </div>
+            <br>
+            <div>
+                <!--// here we can select only one option as the name is  same and type is radio -->
+                Gender: Male <input type="radio" name="myGender" />
+                Female<input type="radio" name="myGender" />
+                Other <input type="radio" name="myGender" />
+            </div>
+            <br>
+            <div>
+                Write about yourself: <br>
+                < name="myText" id="" cols="50" rows="4"></ textarea>
+            </div>
+            <br>
+            <div>
+                <label for="Car">Car</label>
+                <select name="myCar" id="Car">
+                    <option value="Indica">Indica</option>
+                    <option value="SWf">Swift</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <input type="submit" value="Submit Now" />
+                <input type="reset" value="Reset Now" />
+            </div>
+        </form>
+    </body>
+</html>
