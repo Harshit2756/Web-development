@@ -1,19 +1,48 @@
-/* . priority should be like  Readability >>  Modularity >> Efficiency >> Lenght 
+/* / Refactoring
+~ priority should be like  Readability >>  Modularity >> Efficiency >> Lenght 
 
-/* . Modularity is how easy is to reuse your code also how easily can it be narrowed down and  always try to add classes to the tags to be more specific while coding so that later it should not overlap which also minimizes the code repetation 
+~  Modularity is how easy is to reuse your code also how easily can it be narrowed down and  always try to add classes to the tags to be more specific while coding so that later it should not overlap which also minimizes the code repetation 
 
-/*  Don't Use multiple classes for the same element */
-
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat";
-    font-weight: bold;
-}
+  Don't Use multiple classes for the same element */
 
 body {
     font-family: "Montserrat";
     text-align: center;
 }
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+
+/* / Hierachical Selectors
+~ selector1 selector2 {} 
+~ selector 1 is parent of selector2 i.e. selector2 is contained inside selector1 
+~ Here the hierachy is from right to left i.e. selector2 is inside selector1 (left one is parent and right is child) 
+~ #title .container-fluid this means the .container-fluid class which is inside the title id which is more specific 
+
+/ Combined Selectors 
+~ selector1.selector2{}     or    selector1#selector2{}   no space
+~ e.x.  div.container-fluid{color:red} 
+
+/priority of selectors
+~ 1. ID selector
+~ 2. Class selector
+~ 3. Element selector
+~ 4. Universal selector
+~ 5. Attribute selector
+~ 6. Pseudo-class selector
+~ 7. Pseudo-element selector
+~ 8. Combinator selector
+~ 9. Grouping selector
+~ 10. Negation selector
+
+ ~ Don't use inline styles can cause various bugs 
+ ~ Use the ID selector very rarely for like sections or where there is linking of sections 
+~ If there is only one element of type also then also use class selector over ID selector  
+ ~ Don't Use multiple classes for the same element 
+*/
+
 /* ------------------------- Title --------------------------- */
 
 /* .  Use the ID selector very rarely for like sections or where there is linking of sections
@@ -27,7 +56,7 @@ body {
     padding: 3% 15% 7%;
 }
 
-#title h1 {
+.main-heading{
     font-family: "Montserrat";
     /* font-weight: 590; */
     text-align: left;
@@ -73,7 +102,7 @@ body {
 #features {
     padding: 7% 15%;
     background-color: #fff;
-    position: relative;    
+    position: relative;
 }
 
 #features h2 {
@@ -87,7 +116,6 @@ body {
     text-align: center;
     padding: 2%;
 }
-
 
 .feature-title {
     font-size: 1.5rem;
@@ -111,9 +139,9 @@ p {
 #testimonials {
     background-color: #ef8172;
     color: #fff;
-} 
+}
 
-#testimonials h2 {
+.testimonial-text {
     font-family: "montserrat";
     font-weight: 800;
     font-size: 3rem;
@@ -123,20 +151,21 @@ p {
 .testimonial-img {
     width: 20%;
     border-radius: 100%;
-    margin: 20px ;
+    margin: 20px;
 }
 
-.carousel-item{
+.carousel-item {
     padding: 7% 15%;
 }
 
 /* ---------------------- Press ------------------ */
-#press{
+#press {
     padding: 3%;
     background-color: #ef8172;
     text-align: center;
     color: #fff;
 }
+
 .press-logo {
     width: 20%;
     margin: 20px 20px 50px;
@@ -147,14 +176,74 @@ p {
 #pricing {
     padding: 100px;
 }
-.pricing-column{
+
+.pricing-column {
     padding: 3% 2%;
 }
-.pricing-heading{
+
+.pricing-heading {
     font-size: 3rem;
     line-height: 1.5;
 }
-.price{
+
+.price {
     font-size: 3rem;
     line-height: 1.5;
+}
+
+
+/*------------------------------------------------- Media Queries ---------------------------------------------------*/
+
+@media (max-width: 991px) {
+    .title-img {
+        position: static;
+        width: 50%;
+        transform: rotate(0);
+    }
+
+    #title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1150px) and (min-width:991px) {
+    .title-img {
+        position: relative;
+        width: 80%;
+        left: 30%;
+        padding: 5%;
+        width: 100%;
+    }
+
+    #title {
+        text-align: center;
+    }
+
+}
+
+/* ------------------------- cta --------------------------- */
+
+#cta {
+    padding: 7% 15%;
+    background-color: #ff4c68;
+    color: #fff;
+}
+
+#cta h3{
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+#footer {
+    padding: 7% 15%;
+    background-color: #fff;
+    text-align: center;
+    color: #fff;
+    
+}
+ 
+.socail-icons{
+    color: #22252a;
+    font-size: 1.5rem;
+    padding: 10px;
 }
