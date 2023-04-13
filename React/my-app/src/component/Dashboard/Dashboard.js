@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Productdisplay from "./productDisplay";
 
 
 const Dashboard = () => {
@@ -21,7 +22,7 @@ const Dashboard = () => {
             {
                 productdata.map((item) => {
                     return (
-                        <productDisplay data={item}></productDisplay>
+                        <Productdisplay data={item}></Productdisplay>
 
                     )
                 })

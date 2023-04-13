@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductDisplay = (props) => {
+const Productdisplay = (props) => {
     return (
         <div>
             <div className="card" style={{ "width": "18rem;" }}>
@@ -15,4 +15,4 @@ const ProductDisplay = (props) => {
     );
 };
 
-export default ProductDisplay;
+export default Productdisplay;
