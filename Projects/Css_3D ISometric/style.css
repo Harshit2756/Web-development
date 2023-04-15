@@ -16,10 +16,10 @@ body {
 }
 
 ul{
-    position: relative;
-    transform: skewY(-25deg);
+    position: relative;   /*relative to the body */
+    transform: skewY(-25deg); /*skew the ul element */
 }
-
+/* / this for the front side */
 ul li {
     position: absolute;
     top: 0;
@@ -27,16 +27,17 @@ ul li {
     list-style: none;
     width: 100px;
     padding: 15px;
-    background: #383833;
+    background: #3e3e39;
     transition:0.5s;
-}
-
+} 
+/* / this when we hover ,and is front side */
 ul li:hover {
     top: -54px;
     background: var(--clr);
     filter: brightness(0.8);
-}
+} 
 
+/* /this is the left side */
 ul li::before {
     content: '';
     position: absolute;
@@ -47,17 +48,17 @@ ul li::before {
     background: #2f2f2f;
     transform-origin: right;
     transform: skewY(45deg);
+}  
 
-}
-
+/* / this the hover effect of left side */
 ul li:hover::before {
     background: var(--clr);
     filter: brightness(0.8);
-}
-
+} 
+/* / this is the right side of the box */
 ul li::after {
-    content: attr(data-text);
     position: absolute;
+    content: attr(data-text);
     top: -39px;
     left: 0;
     width: 100px;
@@ -74,28 +75,28 @@ ul li::after {
     box-sizing: border-box;
     color: var(--clr);
 
-}
+} 
 
 ul li:hover::after {
     background: var(--clr);
     filter: brightness(0.9);
     color: #fff;
     box-shadow: -100px 100px 20px rgba(0, 0, 0, 0.25);
-}
+} */
 
-ul li a {
+/* ul li a {
     text-decoration: none;
     color: transparent;
     display: block;
     text-transform: uppercase; 
     letter-spacing: 0.09em;
     transition: 0.5s;
-} 
+}  */
 
-ul li:hover a {
+/* ul li:hover a {
     color: #fff;
-}
-
+} */
+/* 
 ul li a span {
     position: absolute;
     top: 0;
@@ -110,8 +111,8 @@ ul li a span {
     display: flex;
     justify-content: center;
     font-size: 1.25em;
-}
+}  */
 
-ul li:hover a span {
+/* ul li:hover a span {
     color: #fff;
-}
+} */
