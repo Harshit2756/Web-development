@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Engineering College</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #0072c6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: #0072c6;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #0072c6;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            margin-bottom: 20px;
+            flex-basis: 30%;
+            min-width: 300px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin-top: 0;
+        }
+
+        .card ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .card li {
+            margin-bottom: 5px;
+        }
+
+        .contact-form {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #0072c6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #0059a1;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Pimpri Chinchwad College Of Engineering</h1>
+    </header>
+    <nav>
+        <a href="#">About us</a>
+        <a href="#">Department</a>
+        <a href="#">Faculty</a>
+        <a href="#">Research</a>
+        <a href="#">Placement</a>
+        <a href="#">Contact us</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h2>About us</h2>
+            <p>Engineering College is a premier educational institution that offers a wide range of undergraduate and
+                postgraduate courses in the field of engineering.</p>
+        </div>
+        <div class="card">
+            <h2>Department</h2>
+            <ul>
+                <li>Computer Science and Engineering</li>
+                <li>Information Technology</li>
+                <li>Electrical and Electronics Engineering</li>
+                <li>Mechanical Engineering</li>
+                <li>Civil Engineering</li>
+                <li>Electronics and Communication Engineering</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Faculty</h2>
+            <p>Our faculty consists of highly qualified and experienced professors who are dedicated to providing the
+                best education to our students.</p>
+        </div>
+        <div class="card">
+            <h2>Research</h2>
+            <p>Our college has state-of-the-art research facilities and a dedicated research team that is committed to
+                advancing the field of engineering through cutting-edge research.</p>
+        </div>
+        <div class="card">
+            <h2>Placement</h2>
+            <p>We have a dedicated placement cell that works tirelessly to ensure that our students get placed in top
+                companies across the country.</p>
+        </div>
+    </div>
+    <div class="contact-form">
+        <h2>Contact us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>

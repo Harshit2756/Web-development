@@ -2,7 +2,35 @@
     -1. ID Selector
     .If we want to select the only paragraph to show any change, then we will be using ID selector.
     -2.Class Selector
-    .If we want to select a paragraph and assign multiple properties to it, then we can use Class Selector. -->
+    .If we want to select a paragraph and assign multiple properties to it, then we can use Class Selector. 
+    -3.Hierachical Selectors
+~ selector1 selector2 {} 
+~ selector 1 is parent of selector2 i.e. selector2 is contained inside selector1 
+~ Here the hierachy is from right to left i.e. selector2 is inside selector1 (left one is parent and right is child) 
+~ #title .container-fluid this means the .container-fluid class which is inside the title id which is more specific 
+
+    -4.Combined Selectors 
+~ selector1.selector2{}     or    selector1#selector2{}   no space
+~ e.x.  div.container-fluid{color:red} 
+
+/priority of selectors
+~ 1. ID selector
+~ 2. Class selector
+~ 3. Element selector
+~ 4. Universal selector
+~ 5. Attribute selector
+~ 6. Pseudo-class selector
+~ 7. Pseudo-element selector
+~ 8. Combinator selector
+~ 9. Grouping selector
+~ 10. Negation selector
+
+ ~ Don't use inline styles can cause various bugs 
+ ~ Use the ID selector very rarely for like sections or where there is linking of sections 
+~ If there is only one element of type also then also use class selector over ID selector  
+ ~ Don't Use multiple classes for the same element 
+*/
+-->
 
 <!DOCTYPE html>
 <html lang="en">
